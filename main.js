@@ -35,6 +35,7 @@ function getTheJoke(e) {
 	sendReq('GET', ' https://icanhazdadjoke.com/')
 		.then((res) => {
 			jokeBody.textContent = res.joke;
+			jokeBody.style.color = 'white';
 		})
 		.catch((err) => {
 			jokeBody.textContent = err;
